@@ -12,7 +12,7 @@ $app->get('/', function () use ($app) {
 });
 
 // Detailed all concerts
-$app->get('/concerts', function() use ($app) {
+$app->get('/concerts/', function() use ($app) {
     $concerts = $app['dao.concert']->findAll();
     return $app['twig']->render('concerts.html.twig', array('concerts' => $concerts));
 });
